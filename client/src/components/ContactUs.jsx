@@ -87,10 +87,12 @@ export default function FuturisticContactPage() {
                   <div className="card-content">
                     <h3 className="card-title">Email Us</h3>
                     <p className="card-description">We'll respond within 24 hours</p>
+                    <div className='cont'>
                     <a href="mailto:bludger52@gmail.com" className="card-link link-email">
                       bludger52@gmail.com
                       <ChevronRight size={16} className="link-arrow" />
                     </a>
+                    </div>
                   </div>
                 </div>
 

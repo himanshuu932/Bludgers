@@ -1,4 +1,9 @@
 /* Base styles */
+  .card-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 * {
   margin: 0;
   padding: 0;
@@ -473,21 +478,30 @@
   font-size: 14px;
   margin-top: 24px;
 }
+.cont{
+  justify-content: center;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 4rem;
   }
-  
+  .hero-section{
+    height: 30vh;
+  }
   .hero-text-3d {
-    text-shadow: 
-      0 1px 0 #2563eb,
-      0 2px 0 #2563eb,
-      0 3px 0 #2563eb,
-      0 4px 0 transparent,
-      0 5px 0 transparent,
-      0 6px 15px rgba(59, 130, 246, 0.8);
+   text-shadow: 
+    0 1px 0 #dfe1e6,
+    0 2px 0 #dfe1e6,
+    0 3px 0 #dfe1e6,
+    0 4px 0 #dfe1e6,
+    0 5px 0 #dfe1e6,
+    0 6px 0 transparent,
+    0 7px 0 transparent,
+    0 8px 0 transparent,
+    0 9px 0 transparent,
+    0 10px 30px rgba(59, 130, 246, 0.8);
   }
   
   .hero-ring {
