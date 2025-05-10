@@ -1,0 +1,242 @@
+/* styles/Domain.css */
+
+/*======================================
+  VARIABLES
+======================================*/
+:root {
+  --aex-primary-glow: #60a5fa;
+  --aex-secondary-glow: #a78bfa;
+  --aex-tertiary-glow: #5eead4;
+  --aex-text-primary: #e0e0e0;
+  --aex-text-secondary: #b0b0d0;
+  --aex-bg-dark: #0a0f1a;
+  --aex-bg-darker: #000;
+  --aex-card-bg: rgba(15,25,45,0.6);
+  --aex-border-color: rgba(96,165,250,0.3);
+  --aex-accent-gradient: linear-gradient(
+    45deg,
+    var(--aex-primary-glow),
+    var(--aex-secondary-glow),
+    var(--aex-tertiary-glow)
+  );
+}
+
+/*======================================
+  PAGE CONTAINER & BACKGROUND
+======================================*/
+.aex-team-page-containerjnfkjd {
+  position: relative;
+  min-height: fit-content;
+  background-color: var(--aex-bg-darker);
+  overflow: hidden;
+  color: var(--aex-text-primary);
+  font-family: 'Montserrat','Poppins',sans-serif;
+}
+
+/* gradient base */
+.aex-team-background-gradientjnfkjd {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--aex-bg-dark) 0%,
+    var(--aex-bg-darker) 80%
+  );
+  z-index: 0;
+}
+
+/* stars */
+.aex-team-starjnfkjd {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.6;
+  animation: aexPulsejnfkjd 3.5s infinite ease-in-out;
+}
+/* Left‐side stars */
+.aex-team-star-1jnfkjd   { top: 12%; left: 10%; animation-delay: 0.2s; }
+.aex-team-star-2jnfkjd   { top: 24%; left: 18%; animation-delay: 0.5s; }
+.aex-team-star-3jnfkjd   { top: 35%; left: 6%;  animation-delay: 0.8s; }
+.aex-team-star-4jnfkjd   { top: 48%; left: 22%; animation-delay: 1.1s; }
+.aex-team-star-5jnfkjd   { top: 60%; left: 14%; animation-delay: 1.4s; }
+.aex-team-star-6jnfkjd   { top: 72%; left: 8%;  animation-delay: 1.7s; }
+.aex-team-star-7jnfkjd   { top: 82%; left: 19%; animation-delay: 2.0s; }
+.aex-team-star-8jnfkjd   { top: 90%; left: 12%; animation-delay: 2.3s; }
+/* Right‐side stars */
+.aex-team-star-right-1jnfkjd { top: 10%; right: 12%; animation-delay: 0.3s; }
+.aex-team-star-right-2jnfkjd { top: 22%; right: 20%; animation-delay: 0.6s; }
+.aex-team-star-right-3jnfkjd { top: 33%; right: 7%;  animation-delay: 0.9s; }
+.aex-team-star-right-4jnfkjd { top: 45%; right: 25%; animation-delay: 1.2s; }
+.aex-team-star-right-5jnfkjd { top: 57%; right: 15%; animation-delay: 1.5s; }
+.aex-team-star-right-6jnfkjd { top: 68%; right: 9%;  animation-delay: 1.8s; }
+.aex-team-star-right-7jnfkjd { top: 80%; right: 21%; animation-delay: 2.1s; }
+.aex-team-star-right-8jnfkjd { top: 92%; right: 14%; animation-delay: 2.4s; }
+
+/* shooting stars */
+.aex-team-glowjnfkjd { /* reuse for glows too if needed */ }
+
+/* glows */
+.aex-team-glowjnfkjd {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.15;
+  animation: aexGlowPulsejnfkjd 8s infinite ease-in-out alternate;
+}
+.aex-team-glow-1jnfkjd {
+  width: 400px; height: 400px;
+  background: var(--aex-primary-glow);
+  top: 15%; left: 8%;
+}
+.aex-team-glow-2jnfkjd {
+  width: 500px; height: 500px;
+  background: var(--aex-secondary-glow);
+  bottom: 10%; right: 12%;
+  animation-delay: -3s;
+}
+.aex-team-glow-3jnfkjd {
+  width: 350px; height: 350px;
+  background: var(--aex-tertiary-glow);
+  top: 45%; right: 30%;
+  animation-delay: -5s;
+  opacity: 0.1;
+}
+
+/* keyframes */
+@keyframes aexPulsejnfkjd {
+  0%,100% { transform: scale(0.9); opacity: 0.4; }
+  50%     { transform: scale(1.1); opacity: 0.8; }
+}
+@keyframes aexGlowPulsejnfkjd {
+  0%   { transform: translate(-10px,10px) scale(0.9); opacity: 0.1; }
+  100% { transform: translate(10px,-10px) scale(1.1); opacity: 0.2; }
+}
+
+/*======================================
+  CONTENT AREA
+======================================*/
+.aex-team-content-areajnfkjd {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* HEADER */
+.aex-team-headerjnfkjd {
+  margin-bottom: 50px;
+}
+.aex-team-main-titlejnfkjd {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  background: var(--aex-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 16px;
+}
+.aex-team-title-dividerjnfkjd {
+  width: 80px;
+  height: 3px;
+  background: var(--aex-accent-gradient);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+.aex-team-header-introjnfkjd {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--aex-text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* GRID */
+.aex-team-gridjnfkjd {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* CARD */
+.aex-team-member-cardjnfkjd {
+  position: relative;
+  background: var(--aex-card-bg);
+  border: 1px solid var(--aex-border-color);
+  border-radius: 16px;
+  padding: 30px 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.aex-team-member-cardjnfkjd:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 40px var(--aex-primary-glow);
+  border-color: var(--aex-primary-glow);
+}
+
+/* shine animation */
+.aex-team-member-card-shinejnfkjd {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: left 1s ease-in-out;
+}
+.aex-team-member-cardjnfkjd:hover .aex-team-member-card-shinejnfkjd {
+  left: 125%;
+}
+
+/* ICON WRAPPER */
+.aex-team-member-image-wrapperjnfkjd {
+  position: relative;
+  margin: 0 auto 16px;
+  width: 80px; height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.aex-team-member-image-border-glowjnfkjd {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px var(--aex-primary-glow),
+    0 0 20px var(--aex-secondary-glow);
+  opacity: 0.7;
+}
+
+/* INFO */
+.aex-team-member-namejnfkjd {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.aex-team-member-biojnfkjd {
+  font-size: 0.95rem;
+  color: var(--aex-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .aex-team-content-areajnfkjd {
+    padding: 40px 16px;
+  }
+  .aex-team-gridjnfkjd {
+    gap: 30px;
+  }
+}

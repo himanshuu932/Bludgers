@@ -1,0 +1,65 @@
+.bld-container1123 { font-family: 'Montserrat','Poppins',sans-serif; min-height:fit-content; background:#000; color:#e0e0e0; position:relative; overflow:hidden; }
+.bld-background1123 { position:absolute; inset:0; background:linear-gradient(to bottom right,#0a0f1a,#000); z-index:0; }
+.bld-star1123 { position:absolute; border-radius:50%; animation:bldPulse1123 3.5s infinite ease-in-out; }
+.bld-star-left1123 {} .bld-star-right1123 {}
+.bld-glow1123 { position:absolute; width:300px; height:300px; border-radius:50%; filter:blur(190px); opacity:.12; animation:bldPulse1123 4.5s infinite ease-in-out; }
+.bld-glow-blue1123 { top:20%; left:10%; background:#3b82f6; }
+.bld-glow-purple1123 { bottom:20%; right:10%; background:#8b5cf6; animation-delay:1.5s; }
+/* Hero */
+.bld-hero1123 { min-height:calc(90vh); display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding-top:80px; }
+.bld-hero-content1123 { position:absolute; top:15%; z-index:10; text-align:center; padding:0 20px; }
+.bld-hero-title1123 { font-size:clamp(3rem,10vw,7.5rem); font-weight:900; margin-bottom:20px; line-height:1.1; }
+.bld-hero-text1123 { color:#fff; text-shadow:0 1px 0 #ccc,0 2px 0 #aaa,0 3px 30px rgba(96,165,250,.8),0 0 10px rgba(255,255,255,.7); transform:perspective(600px) rotateX(4deg); }
+.bld-hero-subtitle1123 { font-size:clamp(1rem,2.5vw,1.25rem); color:#b0b0d0; letter-spacing:3.5px; text-transform:uppercase; margin-top:8px; opacity:.85; }
+.bld-tagline1123 { font-size:clamp(0.9rem,2vw,1.1rem); color:#a5b4fc; margin-top:16px; font-weight:400; }
+.bld-hero-cta1123 { margin-top:48px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.bld-hero-button1123 { display:inline-flex; align-items:center; gap:10px; font-weight:600; padding:14px 28px; border-radius:10px; text-decoration:none; transition:all .35s; cursor:pointer; font-size:.95rem; }
+.bld-primary-btn1123 { background:linear-gradient(45deg,#3b82f6,#8b5cf6); color:#fff; box-shadow:0 6px 20px -5px rgba(96,165,250,.4); }
+.bld-primary-btn1123:hover { transform:translateY(-5px) scale(1.03); box-shadow:0 12px 25px -5px rgba(96,165,250,.5); }
+.bld-secondary-btn1123 { background:transparent; border:2px solid rgba(96,165,250,.6); color:#e0e0e0; }
+.bld-secondary-btn1123:hover { background:rgba(96,165,250,.15); border-color:rgba(96,165,250,.9); transform:translateY(-3px); }
+/* Rings, orb */
+.bld-hero-orb1123 { position:absolute; width:160px; height:160px; border-radius:50%; background:radial-gradient(circle at 30% 30%,#60a5fa,#3b82f6,#1e40af); top:50%; left:50%; transform:translate(-50%,-50%); opacity:.2; filter:blur(10px); animation:bldFloat1123 7s ease-in-out infinite alternate; z-index:1; }
+.bld-hero-ring1123 { position:absolute; border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); }
+.bld-ring-outer1123 { top:35%;width:520px; height:520px; border-top:2px solid #60a5fa; border-right:2px solid #a78bfa; opacity:.15; animation:bldSpin1123 16s linear infinite; }
+.bld-ring-inner1123 { top:35%;width:320px; height:320px; border-bottom:2px solid #60a5fa; border-left:2px solid #a78bfa; opacity:.35; animation:bldSpin1123 11s linear infinite reverse; }
+.bld-ring-middle1123 { top:35%;width:420px; height:420px; border-left:1.5px solid rgba(96,165,250,.25); border-right:1.5px solid rgba(167,139,250,.25); opacity:.25; animation:bldSpin1123 22s linear infinite; }
+/* Planets & Meteors */
+.bld-cosmos-elements1123 { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.bld-planet1123 { position:absolute; border-radius:50%; opacity:.25; }
+.bld-planet-11123 { width:130px; height:130px; background:radial-gradient(circle at 30% 40%,#a78bfa,#581c87); top:12%; right:8%; animation:bldFloatPlanet1123 22s ease-in-out infinite alternate; }
+.bld-planet-21123 { width:90px; height:90px; background:radial-gradient(circle at 70% 30%,#60a5fa,#1e3a8a); bottom:12%; left:6%; animation:bldFloatPlanet1123 18s ease-in-out infinite alternate-reverse; }
+.bld-meteor-belt1123 { position:absolute; width:clamp(300px,70vw,800px); height:100px; top:75%; left:50%; transform:translate(-50%,-50%) rotate(-25deg); background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04) 15%,rgba(255,255,255,0.04) 85%,transparent); border-radius:50px; filter:blur(2.5px); overflow:hidden; }
+.bld-meteor-belt1123::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,0.35) 1px,transparent 1.5px); background-size:12px 12px; opacity:.35; animation:bldPanBelt1123 30s linear infinite; }
+.bld-particles-container1123 { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.bld-particle1123 { position:absolute; width:2.5px; height:2.5px; background:rgba(255,255,255,.6); border-radius:50%; animation:bldParticle1123 25s linear infinite; }
+.bld-shooting-star1123 { position:absolute; width:2.5px; height:90px; background:linear-gradient(to bottom,rgba(229,231,235,.8),transparent); transform:rotate(-45deg); animation:bldShootingStar1123 12s linear infinite; filter:drop-shadow(0 0 6px rgba(200,200,255,.7)); }
+.bld-shooting-11123 { top:10%; left:25%; animation-delay:1.5s; }
+.bld-shooting-21123 { top:25%; right:15%; animation-delay:5s; }
+.bld-shooting-31123 { bottom:35%; left:65%; animation-delay:9s; }
+/* Animations */
+@keyframes bldPulse1123 {0%,100%{opacity:.4;transform:scale(.98);}50%{opacity:.9;transform:scale(1.02);}}
+@keyframes bldFloat1123 {0%{transform:translate(-50%,-50%) translateY(0);}100%{transform:translate(-50%,-50%) translateY(-25px);}}
+@keyframes bldFloatPlanet1123 {0%{transform:translateY(0) translateX(0) rotate(0);}25%{transform:translateY(-15px) translateX(10px) rotate(5deg);}50%{transform:translateY(-30px) translateX(0) rotate(0);}75%{transform:translateY(-15px) translateX(-10px) rotate(-5deg);}100%{transform:translateY(0) translateX(0) rotate(0);}}
+@keyframes bldSpin1123 {from{transform:translate(-50%,-50%) rotate(0);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+@keyframes bldGradientText1123 {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+@keyframes bldParticle1123 {0%{transform:translate(0,0) scale(.5);opacity:0;}20%{opacity:.8;transform:scale(1);}80%{opacity:.5;}100%{transform:translate(40px,40px) scale(.5);opacity:0;}}
+@keyframes bldShootingStar1123 {0%{transform:translateX(0) translateY(0) rotate(-45deg);opacity:0;}5%{opacity:1;}25%{transform:translateX(350px) translateY(350px) rotate(-45deg);opacity:0;}100%{opacity:0;}}
+@keyframes bldPanBelt1123 {from{background-position-x:0;}to{background-position-x:-100px;}}
+
+/* Responsive */
+@media(max-width:768px){
+  .bld-menu-active1123{transform:translateY(0)!important;opacity:1!important;pointer-events:auto!important;}
+  .bld-navbar-toggle1123{display:block;z-index:1000;}
+  .bld-ring-outer1123{width:320px;height:320px;} .bld-ring-inner1123{width:200px;height:200px;} .bld-ring-middle1123{width:260px;height:260px;}
+  .bld-hero-cta1123{flex-direction:column;align-items:center;gap:16px;}
+  .bld-hero-button1123{width:clamp(200px,60%,280px);justify-content:center;}
+  .bld-planet-11123{width:90px;height:90px;top:10%;right:5%;} .bld-planet-21123{width:70px;height:70px;bottom:10%;left:3%;}
+}
+@media(max-width:480px){
+  .bld-hero-orb1123{width:120px;height:120px;} .bld-ring-outer1123{top:25%;width:220px;height:220px;} .bld-ring-inner1123{top:25%;width:140px;height:140px;} .bld-ring-middle1123{top:25%;width:180px;height:180px;}
+  .bld-planet-11123{width:70px;height:70px;} .bld-planet-21123{width:50px;height:50px;} .bld-hero-button1123{padding:12px 24px;font-size:.9rem;}
+.bld-hero1123 { min-height:calc(40vh); display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding-top:80px; }
+
+
+}

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'; // Added useRef
 import { Mail, Phone, MessageCircle, ChevronRight, Github, Linkedin, Instagram, Send, FilePenLine } from 'lucide-react'; // Added FilePenLine
-import './ContactUs.css';
+import './styles/ContactUs.css';
 
 // Data for contact cards - for easier management (same as before)
 const contactMethodsData = [

@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
 import { Linkedin, Github, Twitter } from 'lucide-react';
-import './Team.css';
+import './styles/Team.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -9,10 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 const teamMembersData = [
   {
     id: 'eva-nova',
-    name: 'Dr. Eva Nova',
-    role: 'Chief Cosmic Architect',
-    bio: 'Eva charts the grand designs of our digital universe, ensuring every project is built on a foundation of innovation and stardust.',
-    imageUrl: 'https://via.placeholder.com/250/FFD700/000000?Text=Eva+N.',
+    name: 'Himanshu Upadhyay',
+    role: 'Full Stack Developer',
+    bio: 'Full stack developer with a passion for creating seamless user experiences and robust backend systems.',
+    imageUrl: './him.jpg',
     socials: [
       { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
       { id: 'twitter', icon: <Twitter size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
@@ -50,49 +50,8 @@ const teamMembersData = [
       { id: 'github', icon: <Github size={20} />, url: '#kael-github', label: "Kael's GitHub" },
       { id: 'linkedin', icon: <Linkedin size={20} />, url: '#kael-linkedin', label: "Kael's LinkedIn" },
     ],
-  },
-  {
-    id: 'lyra-sky',
-    name: 'Lyra Sky',
-    role: 'Stellar DevOps Navigator',
-    bio: 'Lyra pilots the deployment pipelines through cosmic storms, ensuring our services run seamlessly across all galaxies.',
-    imageUrl: 'https://via.placeholder.com/250/FFA07A/000000?Text=Lyra+S.',
-    socials: [
-      { id: 'github', icon: <Github size={20} />, url: '#lyra-github', label: "Lyra's GitHub" },
-      { id: 'twitter', icon: <Twitter size={20} />, url: '#lyra-twitter', label: "Lyra's Twitter/X Profile" },
-    ],
-  },
-  {
-    id: 'solaris-vex',
-    name: 'Solaris Vex',
-    role: 'Intergalactic QA Guardian',
-    bio: 'Solaris deploys rigorous tests across time and space, eradicating bugs before they threaten our cosmic endeavors.',
-    imageUrl: 'https://via.placeholder.com/250/FFD1DC/000000?Text=Solaris+V.',
-    socials: [
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#solaris-linkedin', label: "Solaris's LinkedIn" },
-      { id: 'twitter', icon: <Twitter size={20} />, url: '#solaris-twitter', label: "Solaris's Twitter/X Profile" },
-    ],
-  },
-  {
-    id: 'nebula-orin',
-    name: 'Nebula Orin',
-    role: 'Cosmic Content Strategist',
-    bio: 'Nebula weaves narratives that resonate across star systems, aligning our message with the pulse of the universe.',
-    imageUrl: 'https://via.placeholder.com/250/D8BFD8/000000?Text=Nebula+O.',
-    socials: [
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#nebula-linkedin', label: "Nebula's LinkedIn" },
-    ],
-  },
-  {
-    id: 'cosima-quell',
-    name: 'Cosima Quell',
-    role: 'AI Ethereal Liaison',
-    bio: 'Cosima bridges human intuition and artificial intelligence, crafting ethical pathways through the digital frontier.',
-    imageUrl: 'https://via.placeholder.com/250/B0E0E6/000000?Text=Cosima+Q.',
-    socials: [
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#cosima-linkedin', label: "Cosima's LinkedIn" },
-    ],
-  },
+  }
+ 
 ];
 
 export default function AetherialTeamCarousel() {

@@ -1,0 +1,172 @@
+/*======================================
+  VARIABLES (from your footer)
+======================================*/
+:root {
+  --ftr-primary-glow:    #60a5fa;
+  --ftr-secondary-glow:  #a78bfa;
+  --ftr-tertiary-glow:   #5eead4;
+  --ftr-text-primary:    #e0e0e0;
+  --ftr-text-secondary:  #b0b0d0;
+  --ftr-bg-dark:         #0a0f1a;
+  --ftr-bg-darker:       #000000;
+  --ftr-border:          rgba(96,165,250,0.3);
+  --ftr-accent-gradient: linear-gradient(
+    45deg,
+    var(--ftr-primary-glow),
+    var(--ftr-secondary-glow),
+    var(--ftr-tertiary-glow)
+  );
+}
+
+/*======================================
+  NAVBAR WRAPPER & BACKGROUND
+======================================*/
+.bld-navbar1123 {
+  position: relative;
+  z-index: 1000;
+  padding: 24px 0;
+
+  /* dark base + blur (like your footer) */
+  background-color: var(--ftr-bg-darker);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ftr-border);
+  overflow: hidden;
+}
+
+/* gradient base layer (beneath all content) */
+.bld-navbar1123::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--ftr-bg-dark) 0%,
+    var(--ftr-bg-darker) 80%
+  );
+  z-index: 0;
+}
+
+/* lift content above the gradient layer */
+.bld-navbar-container1123 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*======================================
+  LOGO / BRAND
+======================================*/
+.bld-logo1123 {
+  text-decoration: none;
+}
+
+.bld-logo-text1123 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  background: var(--ftr-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*======================================
+  NAV LINKS (DESKTOP)
+======================================*/
+.bld-navbar-menu1123 {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 36px;
+}
+
+.bld-navbar-item1123 a {
+  color: var(--ftr-text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.bld-navbar-item1123 a:hover,
+.bld-active1123 a {
+  color: var(--ftr-text-primary);
+}
+
+/* gradient underline on hover/active */
+.bld-navbar-item1123 a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--ftr-accent-gradient);
+  transition: width 0.35s ease-out;
+}
+
+.bld-navbar-item1123 a:hover::after,
+.bld-active1123 a::after {
+  width: 100%;
+}
+
+/*======================================
+  HAMBURGER TOGGLE
+======================================*/
+.bld-navbar-toggle1123 {
+  display: none;
+  cursor: pointer;
+  color: var(--ftr-text-primary);
+  padding: 8px;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.bld-navbar-toggle1123:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/*======================================
+  MOBILE MENU
+======================================*/
+@media (max-width: 768px) {
+  .bld-navbar-toggle1123 {
+    display: block;
+    z-index: 1000;
+  }
+
+  .bld-navbar-menu1123 {
+    position: fixed;
+    top: 78px;  /* adjust if navbar height changes */
+    left: 0;
+    width: 100%;
+    background-color: rgba(10,15,26,0.8);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 28px;
+    border-bottom: 1px solid var(--ftr-border);
+
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease-out, opacity 0.35s ease-out;
+    z-index: 999;
+  }
+
+  .bld-menu-active1123 {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}

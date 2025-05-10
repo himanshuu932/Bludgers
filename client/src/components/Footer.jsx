@@ -1,12 +1,45 @@
  import { useState } from 'react';
 import { ChevronRight, Menu, X, Github, Linkedin, Instagram } from 'lucide-react';
-import './Footer.css';
+import './styles/Footer.css';
 
 export default function Footer() {
 
 return(
     <div className="footer-container-page">
-    
+  <div className="footer-bg-gradient" />
+  {/* generate stars: */}
+  {[...Array(24)].map((_,i) => (
+    <div
+      key={i}
+      className={`ftr-star ${i<12?'ftr-star-left':'ftr-star-right'}`}
+      style={{
+        '--i': i,
+        top: `${Math.random()*90+5}vh`,
+        animationDelay: `${i*0.25}s`,
+      }}
+    />
+  ))}
+  <div className="ftr-shooting-star ftr-shooting-1" />
+  <div className="ftr-shooting-star ftr-shooting-2" />
+  <div className="ftr-shooting-star ftr-shooting-3" />
+  <div className="ftr-glow ftr-glow-1" />
+  <div className="ftr-glow ftr-glow-2" />
+  <div className="ftr-glow ftr-glow-3" />
+  <div className="ftr-particles-container">
+    {[...Array(15)].map((_,i) => (
+      <div
+        key={i}
+        className="ftr-particle"
+        style={{
+          top: `${Math.random()*100}%`,
+          left: `${Math.random()*100}%`,
+          animationDuration: `${Math.random()*10+10}s`,
+          animationDelay: `${Math.random()*6}s`
+        }}
+      />
+    ))}
+  </div>
+
 <footer className="footer">
         <div className="footer-content">
           <div className="footer-top">

@@ -1,0 +1,297 @@
+/* styles/Team.css */
+
+/*========================================
+  VARIABLES
+========================================*/
+:root {
+  --bld-primary-glow:    #60a5fa;
+  --bld-secondary-glow:  #a78bfa;
+  --bld-tertiary-glow:   #5eead4;
+  --bld-text-primary:    #e0e0e0;
+  --bld-text-secondary:  #b0b0d0;
+  --bld-bg-dark:         #0a0f1a;
+  --bld-bg-darker:       #000000;
+  --bld-border-color:    rgba(96,165,250,0.3);
+  --bld-card-bg:         rgba(15,25,45,0.6);
+  --bld-accent-gradient: linear-gradient(
+    45deg,
+    var(--bld-primary-glow),
+    var(--bld-secondary-glow),
+    var(--bld-tertiary-glow)
+  );
+}
+
+/*========================================
+  PAGE CONTAINER & BACKGROUND
+========================================*/
+.BLD-aex-team-page-container {
+  position: relative;
+  min-height: 90vh;
+  background-color: var(--bld-bg-darker);
+  overflow: hidden;
+  color: var(--bld-text-primary);
+  font-family: 'Montserrat','Poppins', sans-serif;
+}
+
+.BLD-aex-team-background-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--bld-bg-dark) 0%,
+    var(--bld-bg-darker) 80%
+  );
+  z-index: 0;
+}
+
+/* pulsing stars */
+.BLD-aex-team-star {
+  position: absolute;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  animation: bldPulse 3.5s infinite ease-in-out;
+}
+@keyframes bldPulse {
+  0%,100% { opacity: 0.4; transform: scale(0.98); }
+  50%     { opacity: 0.9; transform: scale(1.02); }
+}
+/* left-side */
+.BLD-aex-team-star-1 { top:12%; left:10%;  animation-delay:0.2s; }
+.BLD-aex-team-star-2 { top:24%; left:18%;  animation-delay:0.5s; }
+/* …stars 3–8… */
+.BLD-aex-team-star-3 { top:35%; left: 6%;  animation-delay:0.8s; }
+.BLD-aex-team-star-4 { top:48%; left:22%;  animation-delay:1.1s; }
+.BLD-aex-team-star-5 { top:60%; left:14%;  animation-delay:1.4s; }
+.BLD-aex-team-star-6 { top:72%; left: 8%;  animation-delay:1.7s; }
+.BLD-aex-team-star-7 { top:82%; left:19%;  animation-delay:2.0s; }
+.BLD-aex-team-star-8 { top:90%; left:12%;  animation-delay:2.3s; }
+/* right-side */
+.BLD-aex-team-star-right-1 { top:10%; right:12%; animation-delay:0.3s; }
+.BLD-aex-team-star-right-2 { top:22%; right:20%; animation-delay:0.6s; }
+/* …stars 3–8… */
+.BLD-aex-team-star-right-3 { top:33%; right: 7%; animation-delay:0.9s; }
+.BLD-aex-team-star-right-4 { top:45%; right:25%; animation-delay:1.2s; }
+.BLD-aex-team-star-right-5 { top:57%; right:15%; animation-delay:1.5s; }
+.BLD-aex-team-star-right-6 { top:68%; right: 9%; animation-delay:1.8s; }
+.BLD-aex-team-star-right-7 { top:80%; right:21%; animation-delay:2.1s; }
+.BLD-aex-team-star-right-8 { top:92%; right:14%; animation-delay:2.4s; }
+
+/* glowing orbs */
+.BLD-aex-team-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.15;
+  animation: bldGlowPulse 8s infinite ease-in-out alternate;
+}
+@keyframes bldGlowPulse {
+  0%   { transform: translate(-10px,10px) scale(0.9);  opacity:0.1; }
+  100% { transform: translate(10px,-10px) scale(1.1); opacity:0.2; }
+}
+.BLD-aex-team-glow-1 {
+  width:400px; height:400px;
+  background: var(--bld-primary-glow);
+  top:15%; left:8%;
+}
+.BLD-aex-team-glow-2 {
+  width:500px; height:500px;
+  background: var(--bld-secondary-glow);
+  bottom:10%; right:12%;
+  animation-delay:-3s;
+}
+.BLD-aex-team-glow-3 {
+  width:350px; height:350px;
+  background: var(--bld-tertiary-glow);
+  top:45%; right:30%;
+  animation-delay:-5s;
+  opacity:0.1;
+}
+
+/*========================================
+  CONTENT AREA
+========================================*/
+.BLD-aex-team-content-area {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.BLD-aex-team-main-title {
+  font-size: clamp(2.5rem,6vw,4rem);
+  font-weight: 700;
+  background: var(--bld-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+.BLD-aex-team-title-divider {
+  width: 80px; height:3px;
+  background: var(--bld-accent-gradient);
+  margin: 0 auto 24px;
+  border-radius: 2px;
+}
+.BLD-aex-team-header-intro {
+  font-size: clamp(1rem,2.5vw,1.2rem);
+  color: var(--bld-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/*========================================
+  SLICK CAROUSEL OVERRIDES
+========================================*/
+.BLD-aex-team-carousel {
+  position: relative;
+  padding-bottom: 40px; /* room for dots */
+}
+
+.BLD-aex-team-carousel .slick-prev,
+.BLD-aex-team-carousel .slick-next {
+  color: var(--bld-text-secondary);
+}
+.BLD-aex-team-carousel .slick-prev:hover,
+.BLD-aex-team-carousel .slick-next:hover {
+  color: var(--bld-primary-glow);
+}
+
+/* Ensure exactly 3 centered slides with consistent gaps */
+.BLD-aex-team-carousel .slick-list {
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+.BLD-aex-team-carousel .slick-track {
+  
+  display: flex !important;
+  gap: 20px;
+}
+.BLD-aex-team-carousel .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  height: auto;
+}
+
+/*========================================
+  MEMBER CARD
+========================================*/
+.BLD-aex-team-member-card {
+  position: relative;
+  width: 300px;               /* adjust as needed (280–350px) */
+  padding: 30px 20px;
+  background: var(--bld-card-bg);
+  border: 1px solid var(--bld-border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+.BLD-aex-team-member-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.3),
+    0 0 40px var(--bld-primary-glow);
+  border-color: var(--bld-primary-glow);
+}
+
+/* subtle shine sweep */
+.BLD-aex-team-member-card-shine {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: left 1s ease-in-out;
+}
+.BLD-aex-team-member-card:hover .BLD-aex-team-member-card-shine {
+  left: 125%;
+}
+
+/* avatar & glow */
+.BLD-aex-team-member-image-wrapper {
+  position: relative;
+  margin: 0 auto 16px;
+  width: 200px; height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.BLD-aex-team-member-image {
+  width: 90%; height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.BLD-aex-team-member-image-border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px var(--bld-primary-glow),
+    0 0 20px var(--bld-secondary-glow);
+  opacity: 0.7;
+}
+
+/* info & socials */
+.BLD-aex-team-member-info {
+  text-align: center;
+}
+.BLD-aex-team-member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.BLD-aex-team-member-role {
+  font-size: 0.95rem;
+  color: var(--bld-text-secondary);
+  margin-bottom: 12px;
+}
+.BLD-aex-team-member-bio {
+  font-size: 0.9rem;
+  color: var(--bld-text-secondary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.BLD-aex-team-member-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.BLD-aex-team-social-link {
+  color: var(--bld-text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.BLD-aex-team-social-link:hover {
+  color: var(--bld-primary-glow);
+  transform: scale(1.1) translateY(-2px);
+}
+
+/*========================================
+  RESPONSIVE
+========================================*/
+@media (max-width: 1024px) {
+  .BLD-aex-team-carousel .slick-slide {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .BLD-aex-team-content-area {
+    padding: 40px 16px;
+  }
+  .BLD-aex-team-carousel .slick-slide {
+    padding: 0 5px;
+  }
+}
