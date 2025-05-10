@@ -1,0 +1,352 @@
+/* --- AetherialTeamPage.css --- */
+
+/* --- Base & Typography (Variables reused from contact page for consistency) --- */
+:root {
+  --aex-primary-glow: #60a5fa;
+  --aex-secondary-glow: #a78bfa;
+  --aex-tertiary-glow: #5eead4; /* Cyan/Turquoise */
+  --aex-text-primary: #e0e0e0;
+  --aex-text-secondary: #b0b0d0;
+  --aex-bg-dark: #0a0f1a;
+  --aex-bg-darker: #05080d;
+  --aex-border-color: rgba(96, 165, 250, 0.3);
+  --aex-accent-gradient: linear-gradient(45deg, var(--aex-primary-glow), var(--aex-secondary-glow), var(--aex-tertiary-glow));
+  --aex-card-bg: rgba(18, 28, 58, 0.5); /* Slightly different card bg */
+  --aex-card-border: rgba(96, 165, 250, 0.2);
+  --aex-card-hover-border: rgba(167, 139, 250, 0.7);
+}
+
+.aex-team-page-container {
+  min-height: 100vh;
+  background-color: var(--aex-bg-darker);
+  color: var(--aex-text-primary);
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  padding: 60px 20px; /* More padding for a "page" feel */
+}
+
+/* --- Animated Background & Glows (Adapted from Contact Page) --- */
+.aex-team-background-gradient {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(160deg, var(--aex-bg-dark) 0%, var(--aex-bg-darker) 75%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.aex-team-star {
+  position: absolute;
+  width: 1.5px; height: 1.5px;
+  background-color: rgba(200, 220, 255, 0.6);
+  border-radius: 50%;
+  animation: aexTeamStarPulse 3.5s infinite ease-in-out alternate;
+  box-shadow: 0 0 6px rgba(180, 200, 255, 0.4);
+}
+
+/* Example star positions */
+.aex-team-star-1 { top: 12%; left: 8%; animation-delay: 0.3s; }
+.aex-team-star-2 { top: 45%; left: 18%; animation-delay: 1.1s; width: 2.5px; height: 2.5px;}
+.aex-team-star-3 { top: 60%; left: 5%; animation-delay: 0.7s; }
+.aex-team-star-4 { top: 85%; left: 15%; animation-delay: 1.5s; }
+.aex-team-star-5 { top: 5%; left: 28%; animation-delay: 0.1s; }
+.aex-team-star-right-1 { top: 8%; right: 10%; animation-delay: 0.5s; width: 2.5px; height: 2.5px;}
+.aex-team-star-right-2 { top: 33%; right: 22%; animation-delay: 1.3s; }
+.aex-team-star-right-3 { top: 68%; right: 8%; animation-delay: 0.2s; }
+.aex-team-star-right-4 { top: 92%; right: 18%; animation-delay: 1.0s; }
+.aex-team-star-right-5 { top: 15%; right: 30%; animation-delay: 0.8s; }
+
+
+@keyframes aexTeamStarPulse {
+  0% { opacity: 0.4; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1.3); }
+}
+
+.aex-team-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(180px);
+  z-index: 0;
+  opacity: 0.12;
+  animation: aexTeamGlowMovement 12s infinite ease-in-out alternate;
+  will-change: transform, opacity;
+}
+.aex-team-glow-1 {
+  width: 450px; height: 450px;
+  background-color: var(--aex-primary-glow);
+  top: 5%; left: -10%;
+}
+.aex-team-glow-2 {
+  width: 550px; height: 550px;
+  background-color: var(--aex-secondary-glow);
+  bottom: -5%; right: -15%;
+  animation-delay: -6s;
+}
+.aex-team-glow-3 {
+  width: 380px; height: 380px;
+  background-color: var(--aex-tertiary-glow);
+  top: 50%; left: 40%;
+  transform: translateY(-50%);
+  animation-delay: -3s;
+  opacity: 0.08;
+}
+
+@keyframes aexTeamGlowMovement {
+  0% { transform: scale(0.9) translate(-20px, 15px); opacity: 0.1; }
+  100% { transform: scale(1.15) translate(20px, -10px); opacity: 0.18; }
+}
+
+/* --- Content Area --- */
+.aex-team-content-area {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px; /* Wider for team display */
+  margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.aex-team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.aex-team-main-title {
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  font-weight: 800;
+  background: var(--aex-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 16px;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+}
+.aex-team-title-divider {
+  width: 100px;
+  height: 3.5px;
+  background: var(--aex-accent-gradient);
+  margin: 0 auto 24px auto;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+.aex-team-header-intro {
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  color: var(--aex-text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+}
+
+/* --- Team Grid --- */
+.aex-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px; /* Increased gap */
+}
+
+/* --- Team Member Card --- */
+.aex-team-member-card {
+  background-color: var(--aex-card-bg);
+  border: 1px solid var(--aex-card-border);
+  border-radius: 16px; /* More rounded */
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  position: relative;
+  overflow: hidden; /* For shine effect */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3),
+              inset 0 0 15px rgba(96, 165, 250, 0.05);
+}
+
+.aex-team-member-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--aex-card-hover-border);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4),
+              0 0 30px rgba(167, 139, 250, 0.2);
+}
+
+/* Shine effect for card on hover */
+.aex-team-member-card-shine {
+  position: absolute;
+  top: -100%; /* Start above */
+  left: -75%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none; /* So it doesn't interfere with clicks */
+}
+.aex-team-member-card:hover .aex-team-member-card-shine {
+  opacity: 0.6;
+  top: -50%; /* Move it down */
+  left: -25%;
+  transition-duration: 0.8s; /* Slower shine animation */
+}
+
+
+.aex-team-member-image-wrapper {
+  width: 160px; /* Larger image */
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 24px auto;
+  position: relative;
+  overflow: hidden; /* For border glow if not using box-shadow */
+  border: 3px solid transparent; /* Base for animated border */
+  transition: border-color 0.4s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.aex-team-member-card:hover .aex-team-member-image-wrapper {
+  border-color: var(--aex-secondary-glow);
+}
+
+.aex-team-member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Optional animated border effect for image (can be intense, use with care) */
+.aex-team-member-image-border-glow {
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px; /* Match border width */
+  border-radius: 50%;
+  border: 3px solid transparent;
+  animation: aexImageBorderPulse 2s infinite linear;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.aex-team-member-card:hover .aex-team-member-image-border-glow {
+  opacity: 1;
+}
+@keyframes aexImageBorderPulse {
+  0% { border-color: var(--aex-primary-glow); box-shadow: 0 0 5px var(--aex-primary-glow); }
+  50% { border-color: var(--aex-tertiary-glow); box-shadow: 0 0 15px var(--aex-tertiary-glow); }
+  100% { border-color: var(--aex-primary-glow); box-shadow: 0 0 5px var(--aex-primary-glow); }
+}
+
+
+.aex-team-member-info {
+  /* No specific styles needed if content is centered by card */
+}
+.aex-team-member-name {
+  font-size: 1.5rem; /* Larger name */
+  font-weight: 700;
+  color: var(--aex-text-primary);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.aex-team-member-role {
+  font-size: 0.95rem; /* Clearer role */
+  font-weight: 500;
+  color: var(--aex-tertiary-glow); /* Accent color for role */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.aex-team-member-bio {
+  font-size: 0.9rem;
+  color: var(--aex-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  min-height: 80px; /* Give some consistent space for bio */
+}
+.aex-team-member-socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* More gap */
+}
+.aex-team-social-link {
+  color: var(--aex-text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* For transform */
+}
+.aex-team-social-link:hover {
+  color: var(--aex-primary-glow);
+  transform: scale(1.2) translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) { /* Tablet */
+  .aex-team-page-container {
+    padding: 40px 15px;
+  }
+  .aex-team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .aex-team-member-card {
+    padding: 25px;
+  }
+  .aex-team-member-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+  .aex-team-member-name {
+    font-size: 1.3rem;
+  }
+  .aex-team-member-role {
+    font-size: 0.9rem;
+  }
+  .aex-team-member-bio {
+    font-size: 0.85rem;
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .aex-team-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 30px;
+  }
+  .aex-team-header-main-title {
+     font-size: 2.2rem;
+  }
+  .aex-team-header-intro {
+     font-size: 0.95rem;
+  }
+  .aex-team-member-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+   .aex-team-member-name {
+    font-size: 1.2rem;
+  }
+}
+.aex-team-carousel .slick-slide {
+  padding: 0 15px;
+}
+
+/* Override slick dots color */
+.slick-dots li button:before {
+  font-size: 10px;
+  color: var(--aex-text-secondary);
+}
+.slick-dots li.slick-active button:before {
+  color: var(--aex-primary-glow);
+}
+
+/* Optional: style arrows */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px;
+  color: var(--aex-primary-glow);
+  opacity: 0.8;
+}
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+}
+

@@ -153,6 +153,11 @@
   margin: 0 auto;
   line-height: 1.7;
 }
+.aex-contact-card-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
 /* --- Grid Layout --- */
 .aex-contact-grid {

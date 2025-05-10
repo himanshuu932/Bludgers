@@ -5,7 +5,7 @@ import { ChevronRight, Menu, X } from 'lucide-react';
 const navLinks = [
   { href: '/', label: 'Home', active: true },
   { href: '/services', label: 'Services' },
-
+  { href: '/portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -96,7 +96,7 @@ export default function BludgersHeroSection() {
           <div className="bld-tagline">Crafting tomorrow's digital masterpieces, today.</div>
 
           <div className="bld-hero-cta">
-            <a href="/services" className="bld-hero-button bld-primary-btn">
+            <a href="/portfolio" className="bld-hero-button bld-primary-btn">
               Explore Our Work
               <ChevronRight size={18} />
             </a>
