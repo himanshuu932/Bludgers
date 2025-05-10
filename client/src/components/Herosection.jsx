@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { ChevronRight, Menu, X } from 'lucide-react';
 
 // Navigation links
@@ -10,7 +10,46 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export default function BludgersHeroSection() {
+// Stars component
+const Stars1123 = () => useMemo(() => (
+  <>
+    {[...Array(24)].map((_, i) => (
+      <div
+        key={`star-${i}`}
+        className={`bld-star1123 ${i < 12 ? 'bld-star-left1123' : 'bld-star-right1123'}`}
+        style={{
+          top: `${Math.floor(Math.random() * 90) + 5}vh`,
+          left: i < 12 ? `${Math.floor(Math.random() * 40) + 5}%` : 'auto',
+          right: i >= 12 ? `${Math.floor(Math.random() * 40) + 5}%` : 'auto',
+          animationDelay: `${(i * 0.25)}s`,
+          backgroundColor: i % 3 === 0 ? '#60a5fa' : i % 3 === 1 ? '#a78bfa' : '#ffffff',
+          width: i % 5 === 0 ? '3px' : '2px',
+          height: i % 5 === 0 ? '3px' : '2px',
+        }}
+      />
+    ))}
+  </>
+), []);
+
+// Particles component
+const Particles1123 = () => useMemo(() => (
+  <div className="bld-particles-container1123">
+    {[...Array(15)].map((_, i) => (
+      <div
+        key={`particle-${i}`}
+        className="bld-particle1123"
+        style={{
+          left: `${Math.floor(Math.random() * 100)}%`,
+          top: `${Math.floor(Math.random() * 100)}%`,
+          animationDuration: `${Math.floor(Math.random() * 10) + 12}s`,
+          animationDelay: `${Math.floor(Math.random() * 6)}s`
+        }}
+      ></div>
+    ))}
+  </div>
+), []);
+
+export default function BludgersHeroSection1123() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,59 +57,51 @@ export default function BludgersHeroSection() {
   };
 
   return (
-    <div className="bld-container">
+    <div className="bld-container1123">
       {/* Animated background */}
-      <div className="bld-background">
+      <div className="bld-background1123">
         {/* Stars */}
-        {[...Array(24)].map((_, i) => (
-          <div
-            key={`star-${i}`}
-            className={`bld-star ${i < 12 ? 'bld-star-left' : 'bld-star-right'}`}
-            style={{
-              top: `${Math.floor(Math.random() * 90) + 5}vh`,
-              left: i < 12 ? `${Math.floor(Math.random() * 40) + 5}%` : 'auto',
-              right: i >= 12 ? `${Math.floor(Math.random() * 40) + 5}%` : 'auto',
-              animationDelay: `${(i * 0.25)}s`,
-              backgroundColor: i % 3 === 0 ? '#60a5fa' : i % 3 === 1 ? '#a78bfa' : '#ffffff',
-              width: i % 5 === 0 ? '3px' : '2px',
-              height: i % 5 === 0 ? '3px' : '2px',
-            }}
-          />
-        ))}
+        <Stars1123 />
 
         {/* Shooting stars */}
-        <div className="bld-shooting-star bld-shooting-1"></div>
-        <div className="bld-shooting-star bld-shooting-2"></div>
-        <div className="bld-shooting-star bld-shooting-3"></div>
+        <div className="bld-shooting-star1123 bld-shooting-11123"></div>
+        <div className="bld-shooting-star1123 bld-shooting-21123"></div>
+        <div className="bld-shooting-star1123 bld-shooting-31123"></div>
       </div>
 
       {/* Glow effects */}
-      <div className="bld-glow bld-glow-blue"></div>
-      <div className="bld-glow bld-glow-purple"></div>
+      <div className="bld-glow1123 bld-glow-blue1123"></div>
+      <div className="bld-glow1123 bld-glow-purple1123"></div>
 
       {/* Navbar */}
-      <nav className="bld-navbar">
-        <div className="bld-navbar-container">
-          <div className="bld-logo">
-            <span className="bld-logo-text">BLUDGERS</span>
-          </div>
+      <nav className="bld-navbar1123" aria-label="Main navigation">
+        <div className="bld-navbar-container1123">
+          <a href="/" className="bld-logo1123">
+            <span className="bld-logo-text1123">BLUDGERS</span>
+          </a>
 
-          <div
-            className="bld-navbar-toggle"
+          <button
+            className="bld-navbar-toggle1123"
             onClick={toggleMenu}
-            onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}
-            role="button"
-            tabIndex={0}
             aria-expanded={isMenuOpen}
+            aria-controls="main-menu"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </div>
+          </button>
 
-          <ul className={`bld-navbar-menu ${isMenuOpen ? 'bld-menu-active' : ''}`}>
+          <ul
+            id="main-menu"
+            className={`bld-navbar-menu1123 ${isMenuOpen ? 'bld-menu-active1123' : ''}`}
+          >
             {navLinks.map(link => (
-              <li key={link.href} className={`bld-navbar-item ${link.active ? 'bld-active' : ''}`}>
-                <a href={link.href}>{link.label}</a>
+              <li key={link.href} className={`bld-navbar-item1123 ${link.active ? 'bld-active1123' : ''}`}>
+                <a 
+                  href={link.href}
+                  aria-current={link.active ? "page" : undefined}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -78,61 +109,48 @@ export default function BludgersHeroSection() {
       </nav>
 
       {/* Hero Section */}
-      <div className="bld-hero">
-        <div className="bld-cosmos-elements">
+      <div className="bld-hero1123">
+        <div className="bld-cosmos-elements1123">
           {/* Planets */}
-          <div className="bld-planet bld-planet-1"></div>
-          <div className="bld-planet bld-planet-2"></div>
+          <div className="bld-planet1123 bld-planet-11123"></div>
+          <div className="bld-planet1123 bld-planet-21123"></div>
 
           {/* Meteor belt */}
-          <div className="bld-meteor-belt"></div>
+          <div className="bld-meteor-belt1123"></div>
         </div>
 
-        <div className="bld-hero-content">
-          <h1 className="bld-hero-title">
-            <span className="bld-hero-text">BLUDGERS</span>
+        <div className="bld-hero-content1123">
+          <h1 className="bld-hero-title1123">
+            <span className="bld-hero-text1123">BLUDGERS</span>
           </h1>
-          <div className="bld-hero-subtitle">Digital Innovation & Strategic Solutions</div>
-          <div className="bld-tagline">Crafting tomorrow's digital masterpieces, today.</div>
+          <div className="bld-hero-subtitle1123">Digital Innovation & Strategic Solutions</div>
+          <div className="bld-tagline1123">Crafting tomorrow's digital masterpieces, today.</div>
 
-          <div className="bld-hero-cta">
-            <a href="/portfolio" className="bld-hero-button bld-primary-btn">
+          <div className="bld-hero-cta1123">
+            <a href="/portfolio" className="bld-hero-button1123 bld-primary-btn1123">
               Explore Our Work
               <ChevronRight size={18} />
             </a>
-            <a href="/contact" className="bld-hero-button bld-secondary-btn">
+            <a href="/contact" className="bld-hero-button1123 bld-secondary-btn1123">
               Connect With Us
             </a>
           </div>
         </div>
 
         {/* Animated elements */}
-        <div className="bld-hero-orb"></div>
-        <div className="bld-hero-ring bld-ring-outer"></div>
-        <div className="bld-hero-ring bld-ring-inner"></div>
-        <div className="bld-hero-ring bld-ring-middle"></div>
+        <div className="bld-hero-orb1123"></div>
+        <div className="bld-hero-ring1123 bld-ring-outer1123"></div>
+        <div className="bld-hero-ring1123 bld-ring-inner1123"></div>
+        <div className="bld-hero-ring1123 bld-ring-middle1123"></div>
 
         {/* Particle system */}
-        <div className="bld-particles-container">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={`particle-${i}`}
-              className="bld-particle"
-              style={{
-                left: `${Math.floor(Math.random() * 100)}%`,
-                top: `${Math.floor(Math.random() * 100)}%`,
-                animationDuration: `${Math.floor(Math.random() * 10) + 12}s`,
-                animationDelay: `${Math.floor(Math.random() * 6)}s`
-              }}
-            ></div>
-          ))}
-        </div>
+        <Particles1123 />
       </div>
 
       {/* Styles */}
       <style jsx>{`
         /* Base styles */
-        .bld-container {
+        .bld-container1123 {
           font-family: 'Montserrat', 'Poppins', sans-serif;
           min-height: 100vh;
           background-color: #000000;
@@ -142,7 +160,7 @@ export default function BludgersHeroSection() {
         }
 
         /* Background */
-        .bld-background {
+        .bld-background1123 {
           position: absolute;
           inset: 0;
           background: linear-gradient(to bottom right, #0a0f1a, #000000);
@@ -150,32 +168,32 @@ export default function BludgersHeroSection() {
         }
 
         /* Stars */
-        .bld-star {
+        .bld-star1123 {
           position: absolute;
           border-radius: 50%;
-          animation: bldPulse 3.5s infinite ease-in-out;
+          animation: bldPulse1123 3.5s infinite ease-in-out;
           will-change: opacity;
         }
 
         /* Glow effects */
-        .bld-glow {
+        .bld-glow1123 {
           position: absolute;
           width: 300px;
           height: 300px;
           border-radius: 50%;
           filter: blur(190px);
           opacity: 0.12;
-          animation: bldPulse 4.5s infinite ease-in-out;
+          animation: bldPulse1123 4.5s infinite ease-in-out;
           will-change: opacity, filter;
         }
 
-        .bld-glow-blue {
+        .bld-glow-blue1123 {
           top: 20%;
           left: 10%;
           background-color: #3b82f6;
         }
 
-        .bld-glow-purple {
+        .bld-glow-purple1123 {
           bottom: 20%;
           right: 10%;
           background-color: #8b5cf6;
@@ -183,7 +201,7 @@ export default function BludgersHeroSection() {
         }
 
         /* Navbar */
-        .bld-navbar {
+        .bld-navbar1123 {
           position: relative;
           z-index: 1000;
           padding: 24px 0;
@@ -192,7 +210,7 @@ export default function BludgersHeroSection() {
           border-bottom: 1px solid rgba(40, 50, 70, 0.7);
         }
 
-        .bld-navbar-container {
+        .bld-navbar-container1123 {
           max-width: 1280px;
           margin: 0 auto;
           padding: 0 24px;
@@ -201,7 +219,11 @@ export default function BludgersHeroSection() {
           align-items: center;
         }
 
-        .bld-logo-text {
+        .bld-logo1123 {
+          text-decoration: none;
+        }
+
+        .bld-logo-text1123 {
           font-size: 1.75rem;
           font-weight: 900;
           background: linear-gradient(45deg, #60a5fa, #a78bfa, #5eead4);
@@ -210,10 +232,10 @@ export default function BludgersHeroSection() {
           background-clip: text;
           color: transparent;
           letter-spacing: 1.5px;
-          animation: bldGradientText 5s ease infinite;
+          animation: bldGradientText1123 5s ease infinite;
         }
 
-        .bld-navbar-menu {
+        .bld-navbar-menu1123 {
           display: flex;
           list-style: none;
           padding: 0;
@@ -221,7 +243,7 @@ export default function BludgersHeroSection() {
           gap: 36px;
         }
 
-        .bld-navbar-item a {
+        .bld-navbar-item1123 a {
           color: #c0c0c0;
           text-decoration: none;
           font-size: 1rem;
@@ -231,12 +253,12 @@ export default function BludgersHeroSection() {
           transition: color 0.3s ease;
         }
 
-        .bld-navbar-item a:hover,
-        .bld-active a {
+        .bld-navbar-item1123 a:hover,
+        .bld-active1123 a {
           color: #ffffff;
         }
 
-        .bld-navbar-item a::after {
+        .bld-navbar-item1123 a::after {
           content: '';
           position: absolute;
           width: 0;
@@ -247,26 +269,28 @@ export default function BludgersHeroSection() {
           transition: width 0.35s ease-out;
         }
 
-        .bld-navbar-item a:hover::after,
-        .bld-active a::after {
+        .bld-navbar-item1123 a:hover::after,
+        .bld-active1123 a::after {
           width: 100%;
         }
 
-        .bld-navbar-toggle {
+        .bld-navbar-toggle1123 {
           display: none;
           cursor: pointer;
           color: #ffffff;
           padding: 8px;
           border-radius: 4px;
           transition: background-color 0.2s ease;
+          background: transparent;
+          border: none;
         }
         
-        .bld-navbar-toggle:hover {
+        .bld-navbar-toggle1123:hover {
           background-color: rgba(255, 255, 255, 0.1);
         }
 
         /* Hero Section */
-        .bld-hero {
+        .bld-hero1123 {
           min-height: calc(100vh - 150px);
           display: flex;
           flex-direction: column;
@@ -276,14 +300,14 @@ export default function BludgersHeroSection() {
           padding-top: 80px;
         }
 
-        .bld-hero-content {
+        .bld-hero-content1123 {
           position: relative;
           z-index: 10;
           text-align: center;
           padding: 0 20px;
         }
 
-        .bld-hero-title {
+        .bld-hero-title1123 {
           font-size: clamp(3rem, 10vw, 7.5rem);
           font-weight: 900;
           position: relative;
@@ -292,7 +316,7 @@ export default function BludgersHeroSection() {
           line-height: 1.1;
         }
 
-        .bld-hero-text {
+        .bld-hero-text1123 {
           display: block;
           color: #ffffff;
           text-shadow: 
@@ -306,7 +330,7 @@ export default function BludgersHeroSection() {
           z-index: 5;
         }
         
-        .bld-hero-subtitle {
+        .bld-hero-subtitle1123 {
           font-size: clamp(1rem, 2.5vw, 1.25rem);
           color: #b0b0d0;
           letter-spacing: 3.5px;
@@ -315,14 +339,14 @@ export default function BludgersHeroSection() {
           opacity: 0.85;
         }
         
-        .bld-tagline {
+        .bld-tagline1123 {
           font-size: clamp(0.9rem, 2vw, 1.1rem);
           color: #a5b4fc;
           margin-top: 16px;
           font-weight: 400;
         }
 
-        .bld-hero-cta {
+        .bld-hero-cta1123 {
           margin-top: 48px;
           display: flex;
           gap: 20px;
@@ -330,7 +354,7 @@ export default function BludgersHeroSection() {
           flex-wrap: wrap;
         }
 
-        .bld-hero-button {
+        .bld-hero-button1123 {
           display: inline-flex;
           align-items: center;
           gap: 10px;
@@ -345,31 +369,31 @@ export default function BludgersHeroSection() {
           will-change: transform, box-shadow;
         }
 
-        .bld-primary-btn {
+        .bld-primary-btn1123 {
           background: linear-gradient(45deg, #3b82f6, #8b5cf6);
           color: #ffffff;
           box-shadow: 0 6px 20px -5px rgba(96, 165, 250, 0.4);
         }
         
-        .bld-primary-btn:hover {
+        .bld-primary-btn1123:hover {
           transform: translateY(-5px) scale(1.03);
           box-shadow: 0 12px 25px -5px rgba(96, 165, 250, 0.5);
         }
 
-        .bld-secondary-btn {
+        .bld-secondary-btn1123 {
           background: transparent;
           border: 2px solid rgba(96, 165, 250, 0.6);
           color: #e0e0e0;
         }
 
-        .bld-secondary-btn:hover {
+        .bld-secondary-btn1123:hover {
           background: rgba(96, 165, 250, 0.15);
           border-color: rgba(96, 165, 250, 0.9);
           transform: translateY(-3px);
         }
 
         /* Animated elements */
-        .bld-hero-orb {
+        .bld-hero-orb1123 {
           position: absolute;
           width: 160px;
           height: 160px;
@@ -380,12 +404,12 @@ export default function BludgersHeroSection() {
           transform: translate(-50%, -50%);
           opacity: 0.2;
           filter: blur(10px);
-          animation: bldFloat 7s ease-in-out infinite alternate;
+          animation: bldFloat1123 7s ease-in-out infinite alternate;
           will-change: transform, opacity, filter;
           z-index: 1;
         }
 
-        .bld-hero-ring {
+        .bld-hero-ring1123 {
           position: absolute;
           border-radius: 50%;
           border: 2px solid transparent;
@@ -396,35 +420,35 @@ export default function BludgersHeroSection() {
           z-index: 0;
         }
 
-        .bld-ring-outer {
+        .bld-ring-outer1123 {
           width: 520px;
           height: 520px;
           border-top: 2px solid #60a5fa;
           border-right: 2px solid #a78bfa;
           opacity: 0.15;
-          animation: bldSpin 16s linear infinite;
+          animation: bldSpin1123 16s linear infinite;
         }
 
-        .bld-ring-inner {
+        .bld-ring-inner1123 {
           width: 320px;
           height: 320px;
           border-bottom: 2px solid #60a5fa;
           border-left: 2px solid #a78bfa;
           opacity: 0.35;
-          animation: bldSpin 11s linear infinite reverse;
+          animation: bldSpin1123 11s linear infinite reverse;
         }
         
-        .bld-ring-middle {
+        .bld-ring-middle1123 {
           width: 420px;
           height: 420px;
           border-left: 1.5px solid rgba(96, 165, 250, 0.25);
           border-right: 1.5px solid rgba(167, 139, 250, 0.25);
           opacity: 0.25;
-          animation: bldSpin 22s linear infinite;
+          animation: bldSpin1123 22s linear infinite;
         }
 
         /* Cosmos elements */
-        .bld-cosmos-elements {
+        .bld-cosmos-elements1123 {
           position: absolute;
           inset: 0;
           pointer-events: none;
@@ -432,32 +456,32 @@ export default function BludgersHeroSection() {
           z-index: 0;
         }
 
-        .bld-planet {
+        .bld-planet1123 {
           position: absolute;
           border-radius: 50%;
           opacity: 0.25;
           will-change: transform;
         }
 
-        .bld-planet-1 {
+        .bld-planet-11123 {
           width: 130px;
           height: 130px;
           background: radial-gradient(circle at 30% 40%, #a78bfa, #581c87);
           top: 12%;
           right: 8%;
-          animation: bldFloatPlanet 22s ease-in-out infinite alternate;
+          animation: bldFloatPlanet1123 22s ease-in-out infinite alternate;
         }
 
-        .bld-planet-2 {
+        .bld-planet-21123 {
           width: 90px;
           height: 90px;
           background: radial-gradient(circle at 70% 30%, #60a5fa, #1e3a8a);
           bottom: 12%;
           left: 6%;
-          animation: bldFloatPlanet 18s ease-in-out infinite alternate-reverse;
+          animation: bldFloatPlanet1123 18s ease-in-out infinite alternate-reverse;
         }
 
-        .bld-meteor-belt {
+        .bld-meteor-belt1123 {
           position: absolute;
           width: clamp(300px, 70vw, 800px);
           height: 100px;
@@ -470,17 +494,17 @@ export default function BludgersHeroSection() {
           overflow: hidden;
         }
 
-        .bld-meteor-belt::before {
+        .bld-meteor-belt1123::before {
           content: '';
           position: absolute;
           inset: 0;
           background-image: radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1.5px);
           background-size: 12px 12px;
           opacity: 0.35;
-          animation: bldPanBelt 30s linear infinite;
+          animation: bldPanBelt1123 30s linear infinite;
         }
         
-        .bld-particles-container {
+        .bld-particles-container1123 {
           position: absolute;
           inset: 0;
           overflow: hidden;
@@ -488,52 +512,52 @@ export default function BludgersHeroSection() {
           z-index: 0;
         }
 
-        .bld-particle {
+        .bld-particle1123 {
           position: absolute;
           width: 2.5px;
           height: 2.5px;
           background-color: rgba(255, 255, 255, 0.6);
           border-radius: 50%;
-          animation: bldParticle 25s linear infinite;
+          animation: bldParticle1123 25s linear infinite;
           will-change: transform, opacity;
         }
 
-        .bld-shooting-star {
+        .bld-shooting-star1123 {
           position: absolute;
           width: 2.5px;
           height: 90px;
           background: linear-gradient(to bottom, rgba(229, 231, 235, 0.8), transparent);
           transform: rotate(-45deg);
-          animation: bldShootingStar 12s linear infinite;
+          animation: bldShootingStar1123 12s linear infinite;
           opacity: 0;
           will-change: transform, opacity;
           filter: drop-shadow(0 0 6px rgba(200, 200, 255, 0.7));
         }
 
-        .bld-shooting-1 {
+        .bld-shooting-11123 {
           top: 10%; left: 25%; animation-delay: 1.5s;
         }
         
-        .bld-shooting-2 {
+        .bld-shooting-21123 {
           top: 25%; right: 15%; animation-delay: 5s;
         }
         
-        .bld-shooting-3 {
+        .bld-shooting-31123 {
           bottom: 35%; left: 65%; animation-delay: 9s;
         }
 
         /* Animations */
-        @keyframes bldPulse {
+        @keyframes bldPulse1123 {
           0%, 100% { opacity: 0.4; transform: scale(0.98); }
           50% { opacity: 0.9; transform: scale(1.02); }
         }
 
-        @keyframes bldFloat {
+        @keyframes bldFloat1123 {
           0% { transform: translate(-50%, -50%) translateY(0px); }
           100% { transform: translate(-50%, -50%) translateY(-25px); }
         }
         
-        @keyframes bldFloatPlanet {
+        @keyframes bldFloatPlanet1123 {
           0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
           25% { transform: translateY(-15px) translateX(10px) rotate(5deg); }
           50% { transform: translateY(-30px) translateX(0px) rotate(0deg); }
@@ -541,39 +565,39 @@ export default function BludgersHeroSection() {
           100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
         }
 
-        @keyframes bldSpin {
+        @keyframes bldSpin1123 {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
-        @keyframes bldGradientText {
+        @keyframes bldGradientText1123 {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
 
-        @keyframes bldParticle {
+        @keyframes bldParticle1123 {
           0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
           20% { opacity: 0.8; transform: scale(1); }
           80% { opacity: 0.5; }
           100% { transform: translate(40px, 40px) scale(0.5); opacity: 0; }
         }
 
-        @keyframes bldShootingStar {
+        @keyframes bldShootingStar1123 {
           0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 0; }
           5% { opacity: 1; }
           25% { transform: translateX(350px) translateY(350px) rotate(-45deg); opacity: 0; }
           100% { opacity: 0; }
         }
         
-        @keyframes bldPanBelt {
+        @keyframes bldPanBelt1123 {
           from { background-position-x: 0px; }
           to { background-position-x: -100px; }
         }
 
         /* Responsive styles */
         @media (max-width: 768px) {
-          .bld-navbar-menu {
+          .bld-navbar-menu1123 {
             position: fixed;
             top: 78px;
             left: 0;
@@ -592,51 +616,51 @@ export default function BludgersHeroSection() {
             border-bottom: 1px solid rgba(40, 50, 70, 0.7);
           }
 
-          .bld-menu-active {
+          .bld-menu-active1123 {
             transform: translateY(0) !important;
             opacity: 1 !important;
             pointer-events: auto !important;
           }
 
-          .bld-navbar-toggle {
+          .bld-navbar-toggle1123 {
             display: block;
             z-index: 1000;
           }
 
-          .bld-ring-outer { width: 320px; height: 320px; }
-          .bld-ring-inner { width: 200px; height: 200px; }
-          .bld-ring-middle { width: 260px; height: 260px; }
+          .bld-ring-outer1123 { width: 320px; height: 320px; }
+          .bld-ring-inner1123 { width: 200px; height: 200px; }
+          .bld-ring-middle1123 { width: 260px; height: 260px; }
 
-          .bld-hero-cta {
+          .bld-hero-cta1123 {
             flex-direction: column;
             align-items: center;
             gap: 16px;
           }
           
-          .bld-hero-button {
+          .bld-hero-button1123 {
             width: clamp(200px, 60%, 280px);
             justify-content: center;
           }
 
-          .bld-planet-1 { width: 90px; height: 90px; top: 10%; right: 5%; }
-          .bld-planet-2 { width: 70px; height: 70px; bottom: 10%; left: 3%; }
+          .bld-planet-11123 { width: 90px; height: 90px; top: 10%; right: 5%; }
+          .bld-planet-21123 { width: 70px; height: 70px; bottom: 10%; left: 3%; }
         }
 
         @media (max-width: 480px) {
-          .bld-navbar { padding: 20px 0; }
-          .bld-navbar-container { padding: 0 16px; }
-          .bld-navbar-menu { top: 70px; }
-          .bld-logo-text { font-size: 1.5rem; }
+          .bld-navbar1123 { padding: 20px 0; }
+          .bld-navbar-container1123 { padding: 0 16px; }
+          .bld-navbar-menu1123 { top: 70px; }
+          .bld-logo-text1123 { font-size: 1.5rem; }
           
-          .bld-hero-orb { width: 120px; height: 120px; }
-          .bld-ring-outer { width: 220px; height: 220px; }
-          .bld-ring-inner { width: 140px; height: 140px; }
-          .bld-ring-middle { width: 180px; height: 180px; }
+          .bld-hero-orb1123 { width: 120px; height: 120px; }
+          .bld-ring-outer1123 { width: 220px; height: 220px; }
+          .bld-ring-inner1123 { width: 140px; height: 140px; }
+          .bld-ring-middle1123 { width: 180px; height: 180px; }
           
-          .bld-planet-1 { width: 70px; height: 70px; }
-          .bld-planet-2 { width: 50px; height: 50px; }
+          .bld-planet-11123 { width: 70px; height: 70px; }
+          .bld-planet-21123 { width: 50px; height: 50px; }
           
-          .bld-hero-button {
+          .bld-hero-button1123 {
             padding: 12px 24px;
             font-size: 0.9rem;
           }
