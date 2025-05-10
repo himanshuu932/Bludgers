@@ -13,9 +13,7 @@
 .bld-hero-subtitle1123 { font-size:clamp(1rem,2.5vw,1.25rem); color:#b0b0d0; letter-spacing:3.5px; text-transform:uppercase; margin-top:8px; opacity:.85; }
 .bld-tagline1123 { font-size:clamp(0.9rem,2vw,1.1rem); color:#a5b4fc; margin-top:16px; font-weight:400; }
 .bld-hero-cta1123 { margin-top:48px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-.bld-hero-button1123 { display:inline-flex; align-items:center; gap:10px; font-weight:600; padding:14px 28px; border-radius:10px; text-decoration:none; transition:all .35s; cursor:pointer; font-size:.95rem; }
-.bld-primary-btn1123 { background:linear-gradient(45deg,#3b82f6,#8b5cf6); color:#fff; box-shadow:0 6px 20px -5px rgba(96,165,250,.4); }
-.bld-primary-btn1123:hover { transform:translateY(-5px) scale(1.03); box-shadow:0 12px 25px -5px rgba(96,165,250,.5); }
+  .bld-primary-btn1123:hover { transform:translateY(-5px) scale(1.03); box-shadow:0 12px 25px -5px rgba(96,165,250,.5); }
 .bld-secondary-btn1123 { background:transparent; border:2px solid rgba(96,165,250,.6); color:#e0e0e0; }
 .bld-secondary-btn1123:hover { background:rgba(96,165,250,.15); border-color:rgba(96,165,250,.9); transform:translateY(-3px); }
 /* Rings, orb */
@@ -59,7 +57,7 @@
 @media(max-width:480px){
   .bld-hero-orb1123{width:120px;height:120px;} .bld-ring-outer1123{top:25%;width:220px;height:220px;} .bld-ring-inner1123{top:25%;width:140px;height:140px;} .bld-ring-middle1123{top:25%;width:180px;height:180px;}
   .bld-planet-11123{width:70px;height:70px;} .bld-planet-21123{width:50px;height:50px;} .bld-hero-button1123{padding:12px 24px;font-size:.9rem;}
-.bld-hero1123 { min-height:calc(40vh); display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding-top:80px; }
-
+.bld-hero1123 { min-height:calc(90vh); display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding-top:80px; }
+.bld-hero-cta1123 { margin-top:48px; display:flex;flex-direction: column; gap:20px; justify-content:center; flex-wrap:wrap; }
 
 }
