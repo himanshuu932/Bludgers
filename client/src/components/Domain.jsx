@@ -50,7 +50,7 @@ export default function AetherialDomainsPage() {
             <div key={domain.id} className="aex-team-member-card">
               <div className="aex-team-member-card-shine"></div>
               <div className="aex-team-member-image-wrapper">
-                {domain.icon}
+                <div className="aex-team-member-image">{domain.icon}</div>
                 <div className="aex-team-member-image-border-glow"></div>
               </div>
               <div className="aex-team-member-info">
