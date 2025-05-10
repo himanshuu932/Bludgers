@@ -1,0 +1,65 @@
+/* Footer background wrapper */
+.footer-container-page {
+  min-height: fit-content;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background gradient */
+.background-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #111827, #000);
+}
+
+/* Star animations */
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+.star-1 { top:  80px; left: 160px; background-color: #60a5fa; }
+.star-2 { top: 240px; left:  80px; background-color: #a78bfa; animation-delay: .5s; }
+.star-3 { top: 128px; left: 320px; background-color: #60a5fa; animation-delay: 1s; }
+.star-4 { top: 320px; left: 240px; background-color: #a78bfa; animation-delay: 1.5s; }
+.star-5 { top: 160px; left:  40px; background-color: #60a5fa; animation-delay: 2s; }
+.star-6 { top:  40px; left: 240px; background-color: #a78bfa; animation-delay: 2.5s; }
+
+.star-right-1 { top:  80px; right: 160px; background-color: #60a5fa; animation-delay: .2s; }
+.star-right-2 { top: 240px; right:  80px; background-color: #a78bfa; animation-delay: .7s; }
+.star-right-3 { top: 128px; right: 320px; background-color: #60a5fa; animation-delay: 1.2s; }
+.star-right-4 { top: 320px; right: 240px; background-color: #a78bfa; animation-delay: 1.7s; }
+.star-right-5 { top: 160px; right:  40px; background-color: #60a5fa; animation-delay: 2.2s; }
+.star-right-6 { top:  40px; right: 240px; background-color: #a78bfa; animation-delay: 2.7s; }
+
+/* Glow effects */
+.glow-effect {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  filter: blur(128px);
+  opacity: 0.1;
+  animation: pulse 4s infinite;
+}
+.glow-effect-1 {
+  top: 25%;
+  left: 25%;
+  background-color: #3b82f6;
+}
+.glow-effect-2 {
+  bottom: 25%;
+  right: 25%;
+  background-color: #8b5cf6;
+  animation-delay: 1s;
+}
