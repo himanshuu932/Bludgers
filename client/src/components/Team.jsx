@@ -112,47 +112,47 @@ export default function AetherialTeamCarousel() {
   };
 
   return (
-    <div className="aex-team-page-container">
+    <div className="BLD-aex-team-page-container">
       {/* Background & Glows unchanged */}
-      <div className="aex-team-background-gradient">
-        {[...Array(8)].map((_, i) => <div key={`star-l-${i}`} className={`aex-team-star aex-team-star-${i + 1}`}></div>)}
-        {[...Array(8)].map((_, i) => <div key={`star-r-${i}`} className={`aex-team-star aex-team-star-right-${i + 1}`}></div>)}
+      <div className="BLD-aex-team-background-gradient">
+        {[...Array(8)].map((_, i) => <div key={`star-l-${i}`} className={`BLD-aex-team-star BLD-aex-team-star-${i + 1}`}></div>)}
+        {[...Array(8)].map((_, i) => <div key={`star-r-${i}`} className={`BLD-aex-team-star BLD-aex-team-star-right-${i + 1}`}></div>)}
       </div>
-      <div className="aex-team-glow aex-team-glow-1"></div>
-      <div className="aex-team-glow aex-team-glow-2"></div>
-      <div className="aex-team-glow aex-team-glow-3"></div>
+      <div className="BLD-aex-team-glow BLD-aex-team-glow-1"></div>
+      <div className="BLD-aex-team-glow BLD-aex-team-glow-2"></div>
+      <div className="BLD-aex-team-glow BLD-aex-team-glow-3"></div>
 
       {/* Content Area */}
-      <div className="aex-team-content-area">
-        <header className="aex-team-header">
-          <h1 className="aex-team-main-title">Meet Our Stellar Navigators</h1>
-          <div className="aex-team-title-divider"></div>
-          <p className="aex-team-header-intro">
+      <div className="BLD-aex-team-content-area">
+        <header className="BLD-aex-team-header">
+          <h1 className="BLD-aex-team-main-title">Meet Our Stellar Navigators</h1>
+          <div className="BLD-aex-team-title-divider"></div>
+          <p className="BLD-aex-team-header-intro">
             A constellation of brilliant minds dedicated to pioneering the future of digital experiences.
             Each member brings a unique spark, fueling our journey towards innovation and excellence.
           </p>
         </header>
 
-        <Slider {...settings} className="aex-team-carousel">
+        <Slider {...settings} className="BLD-aex-team-carousel">
           {teamMembersData.map(member => (
-            <div key={member.id} className="aex-team-member-card">
-              <div className="aex-team-member-card-shine"></div>
-              <div className="aex-team-member-image-wrapper">
-                <img src={member.imageUrl} alt={`Profile of ${member.name}`} className="aex-team-member-image" />
-                <div className="aex-team-member-image-border-glow"></div>
+            <div key={member.id} className="BLD-aex-team-member-card">
+              <div className="BLD-aex-team-member-card-shine"></div>
+              <div className="BLD-aex-team-member-image-wrapper">
+                <img src={member.imageUrl} alt={`Profile of ${member.name}`} className="BLD-aex-team-member-image" />
+                <div className="BLD-aex-team-member-image-border-glow"></div>
               </div>
-              <div className="aex-team-member-info">
-                <h2 className="aex-team-member-name">{member.name}</h2>
-                <p className="aex-team-member-role">{member.role}</p>
-                <p className="aex-team-member-bio">{member.bio}</p>
-                <div className="aex-team-member-socials">
+              <div className="BLD-aex-team-member-info">
+                <h2 className="BLD-aex-team-member-name">{member.name}</h2>
+                <p className="BLD-aex-team-member-role">{member.role}</p>
+                <p className="BLD-aex-team-member-bio">{member.bio}</p>
+                <div className="BLD-aex-team-member-socials">
                   {member.socials.map(social => (
                     <a
                       key={social.id}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="aex-team-social-link"
+                      className="BLD-aex-team-social-link"
                       aria-label={social.label}
                     >
                       {social.icon}
