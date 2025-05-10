@@ -57,7 +57,5 @@
 @media(max-width:480px){
   .bld-hero-orb1123{width:120px;height:120px;} .bld-ring-outer1123{top:25%;width:220px;height:220px;} .bld-ring-inner1123{top:25%;width:140px;height:140px;} .bld-ring-middle1123{top:25%;width:180px;height:180px;}
   .bld-planet-11123{width:70px;height:70px;} .bld-planet-21123{width:50px;height:50px;} .bld-hero-button1123{padding:12px 24px;font-size:.9rem;}
-.bld-hero1123 { min-height:calc(90vh); display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding-top:80px; }
-.bld-hero-cta1123 { margin-top:48px; display:flex;flex-direction: column; gap:20px; justify-content:center; flex-wrap:wrap; }
 
 }
