@@ -19,11 +19,14 @@
 }
 
 /*======================================
-  NAVBAR WRAPPER & BACKGROUND
+  NAVBAR WRAPPER & FIXED POSITION
 ======================================*/
 .bld-navbar1123 {
-  position: relative;
-  z-index: 1000;
+  position: fixed;        /* pin to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;         /* well above everything else */
   padding: 24px 0;
 
   /* dark base + blur (like your footer) */
@@ -46,11 +49,12 @@
   z-index: 0;
 }
 
-/* lift content above the gradient layer */
+/*======================================
+  CONTAINER & LIFTED CONTENT
+======================================*/
 .bld-navbar-container1123 {
   position: relative;
-  z-index: 100;
-
+  z-index: 1;             /* above the ::before gradient */
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
@@ -141,12 +145,12 @@
 @media (max-width: 768px) {
   .bld-navbar-toggle1123 {
     display: block;
-    z-index: 1000;
+    z-index: 10001;    /* above everything, including the fixed navbar */
   }
 
   .bld-navbar-menu1123 {
     position: fixed;
-    top: 78px;  /* adjust if navbar height changes */
+    top: 78px;         /* sits right below the navbar */
     left: 0;
     width: 100%;
     background-color: rgba(10,15,26,0.8);
@@ -161,7 +165,7 @@
     opacity: 0;
     pointer-events: none;
     transition: transform 0.35s ease-out, opacity 0.35s ease-out;
-    z-index: 9999;
+    z-index: 10000;
   }
 
   .bld-menu-active1123 {
@@ -169,4 +173,29 @@
     opacity: 1 !important;
     pointer-events: auto !important;
   }
+}
+
+@media (max-width: 480px) {
+ .bld-navbar-menu1123 {
+  position: fixed;
+  top: 78px;                /* or whatever your nav height is */
+  left: 0;
+  width: 100%;
+  z-index: 1100 !important; /* <<< bump this up */
+  background-color: rgba(10,15,26,0.8);
+  backdrop-filter: blur(12px);
+  /* …rest of your styles… */
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease-out, opacity 0.35s ease-out;
+}
+
+/* when open, keep it on top */
+.bld-menu-active1123 {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  z-index: 1100 !important; /* <<< and here too */
+}
 }
