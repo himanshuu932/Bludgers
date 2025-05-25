@@ -11,47 +11,46 @@ const teamMembersData = [
     id: 'eva-nova',
     name: 'Himanshu Upadhyay',
     role: 'Full Stack Developer',
-    bio: 'Full stack developer with a passion for creating seamless user experiences and robust backend systems.',
-    imageUrl: './him.jpg',
+    bio: 'Himanshu is a visionary Full Stack Developer, bridging the gap between elegant front-end interfaces and robust, scalable back-end systems, crafting seamless digital experiences .', // Enhanced Description
+    imageUrl: '/him.webp', // Changed to .webp
     socials: [
       { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
-      { id: 'twitter', icon: <Twitter size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
+      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
-    id: 'jax-ryker',
-    name: 'Jax "Cipher" Ryker',
-    role: 'Lead Systems Engineer',
-    bio: 'Jax is the master of complex systems, weaving intricate networks that power our digital constellations with unwavering reliability.',
-    imageUrl: 'https://via.placeholder.com/250/ADD8E6/000000?Text=Jax+R.',
+    id: 'utkarsh',
+    name: 'Utkarsh',
+    role: 'Backend Developer',
+    bio: 'A highly skilled backend developer specializing in robust API design and scalable database solutions. Utkarsh ensures the seamless flow of data that powers our applications.',
+    imageUrl: '/utk.webp', // Changed to .webp
     socials: [
-      { id: 'github', icon: <Github size={20} />, url: '#jax-github', label: "Jax's GitHub" },
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#jax-linkedin', label: "Jax's LinkedIn" },
+    { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
-    id: 'seraphina-lin',
-    name: 'Seraphina Lin',
-    role: 'Quantum UX Designer',
-    bio: 'Seraphina crafts intuitive and mesmerizing user experiences, making interactions feel like a seamless journey through hyper-space.',
-    imageUrl: 'https://via.placeholder.com/250/E6E6FA/000000?Text=Seraphina+L.',
+    id: 'ashutosh-verma',
+    name: 'Ashutosh Verma',
+    role: 'Frontend Developer',
+    bio: 'Ashutosh brings designs to life with elegant and responsive user interfaces, focusing on performance and user delight. He crafts the visual magic users interact with daily.',
+    imageUrl: './av.webp', // Changed to .webp
     socials: [
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#sera-linkedin', label: "Seraphina's LinkedIn" },
-      { id: 'twitter', icon: <Twitter size={20} />, url: '#sera-twitter', label: "Seraphina's Twitter/X Profile" },
+     { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
-    id: 'kael-orion',
-    name: 'Kael Orion',
-    role: 'Data Alchemist',
-    bio: 'Kael transmutes raw data into celestial insights, uncovering patterns that guide our strategic voyages across the market nebulae.',
-    imageUrl: 'https://via.placeholder.com/250/90EE90/000000?Text=Kael+O.',
+    id: 'arav-shukla',
+    name: 'Arav Shukla',
+    role: 'Frontend Developer',
+    bio: 'Arav is passionate about creating intuitive and engaging web experiences. He combines creativity with technical precision to build interfaces that captivate users.',
+    imageUrl: 'https://via.placeholder.com/250/90EE90/000000?Text=Arav+S.', // Placeholder. If you have a .webp for Arav, replace this.
     socials: [
-      { id: 'github', icon: <Github size={20} />, url: '#kael-github', label: "Kael's GitHub" },
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#kael-linkedin', label: "Kael's LinkedIn" },
+       { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
     ],
   }
- 
 ];
 
 export default function AetherialTeamCarousel() {

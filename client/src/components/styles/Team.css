@@ -223,18 +223,26 @@
 .BLD-aex-team-member-image-wrapper {
   position: relative;
   margin: 0 auto 16px;
-  width: 200px; height: 200px;
+  width: 250px; height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: rgba(255,255,255,0.05);
 }
+/* styles/Team.css */
+
+/* ... other styles ... */
+
 .BLD-aex-team-member-image {
-  width: 90%; height: 90%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed back to 'cover' for zooming/filling */
+  object-position: top; /* Aligns the top of the image */
   border-radius: 50%;
 }
+
+/* ... other styles ... */
 .BLD-aex-team-member-image-border-glow {
   position: absolute;
   inset: 0;
@@ -264,6 +272,7 @@
   color: var(--bld-text-secondary);
   line-height: 1.4;
   margin-bottom: 16px;
+  text-align: justify;
 }
 .BLD-aex-team-member-socials {
   display: flex;
