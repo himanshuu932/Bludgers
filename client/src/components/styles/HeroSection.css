@@ -38,14 +38,14 @@
 
 /* Hero */
 .bld-hero1123 {
-  min-height:calc(100vh); /* Changed to 100vh */
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  padding-top:80px;
-  padding-bottom: 40px; /* Added padding at the bottom */
+  min-height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 120px; /* Increased from 80px to 120px */
+  padding-bottom: 40px;
 }
 
 .bld-hero-content1123 {
