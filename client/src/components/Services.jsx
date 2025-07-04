@@ -39,29 +39,19 @@ const WebsiteShowcase = () => {
       url: "https://dog-registration.vercel.app/",
       description: "Online portal for dog registration and management, including vaccination records and owner details for Nagar Nigam Gorakhpur",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
-      technologies: ["Vue.js", "Firebase", "Express"],
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
       completedDate: "2025-06-05",
       category: "Government Services"
     },
-    {
+   {
       id: 5,
-      name: "Educational Platform",
-      url: "https://example-education.com",
-      description: "Interactive learning platform with course management and progress tracking",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop",
-      technologies: ["React", "Redux", "PostgreSQL"],
-      completedDate: "2024-05-20",
-      category: "Education"
-    },
-    {
-      id: 6,
-      name: "Real Estate Portal",
-      url: "https://example-realestate.com",
-      description: "Advanced real estate platform with property listings and virtual tours",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
-      technologies: ["Angular", "NestJS", "MySQL"],
-      completedDate: "2024-06-15",
-      category: "Real Estate"
+      name: "KalyanMandapam Portal",
+      url: "https://kalyan-mandapam.vercel.app/",
+      description: "Online booking portal for Kalyan Mandapam, allowing users to check availability, book dates, and manage reservations",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2025-07-05",
+      category: "Government Services"
     }
   ]);
 
