@@ -172,7 +172,7 @@ const WebsiteShowcase = () => {
               color: 'transparent'
             }}
           >
-            Our Website Portfolio
+            Our  Portfolio
           </h1>
           <div 
             className="w-20 h-1 mx-auto mb-6 rounded-full"
