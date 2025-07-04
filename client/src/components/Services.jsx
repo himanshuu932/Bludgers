@@ -5,7 +5,7 @@ const WebsiteShowcase = () => {
   const [websites] = useState([
     {
       id: 1,
-      name: "E-Commerce Platform",
+      name: "Sewa Bharat Goraksh",
       url: "https://sewabharatigoraksh.org/",
       description: "Charity Website for promotion and collleting donations",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
@@ -15,13 +15,13 @@ const WebsiteShowcase = () => {
     },
     {
       id: 2,
-      name: "Corporate Website",
-      url: "https://example-corporate.com",
+      name: "DAVPG College GKP",
+      url: "https://davpgcollegegkp.ac.in",
       description: "Professional corporate website with modern design and comprehensive business solutions",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
       completedDate: "2024-02-28",
-      category: "Corporate"
+      category: "Education"
     },
     {
       id: 3,
