@@ -25,13 +25,13 @@ const WebsiteShowcase = () => {
     },
     {
       id: 3,
-      name: "Portfolio Website",
-      url: "https://example-portfolio.com",
+      name: "Peek PDF",
+      url: "https://peek-pdf.netlify.app/",
       description: "Creative portfolio showcasing innovative designs and interactive experiences",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=200&fit=crop",
-      technologies: ["React", "Three.js", "GSAP"],
+      technologies:  ["React.js", "CSS", "GenAI"," Node.js", "Express.js", "MongoDB"],
       completedDate: "2024-03-10",
-      category: "Portfolio"
+      category: "Business"
     },
     {
       id: 4,
