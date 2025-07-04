@@ -248,14 +248,14 @@ const WebsiteShowcase = () => {
                 
                 {/* Category Badge */}
                 <div 
-                  className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
+                  className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
                   style={{
                     background: `${getCategoryColor(website.category)}20`,
                     border: `1px solid ${getCategoryColor(website.category)}40`,
                     color: getCategoryColor(website.category)
                   }}
                 >
-                  {website.category}
+                  Live
                 </div>
 
                 {/* Overlay */}
@@ -281,7 +281,19 @@ const WebsiteShowcase = () => {
 
               {/* Card Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-white">{website.name}</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-semibold text-white">{website.name}</h3>
+                  <span 
+                    className="px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm flex-shrink-0"
+                    style={{
+                      background: `${getCategoryColor(website.category)}20`,
+                      border: `1px solid ${getCategoryColor(website.category)}40`,
+                      color: getCategoryColor(website.category)
+                    }}
+                  >
+                    {website.category}
+                  </span>
+                </div>
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">{website.description}</p>
                 
                 {/* Technologies */}
