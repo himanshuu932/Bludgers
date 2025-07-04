@@ -17,31 +17,31 @@ const WebsiteShowcase = () => {
       id: 2,
       name: "DAVPG College GKP",
       url: "https://davpgcollegegkp.ac.in",
-      description: "Professional corporate website with modern design and comprehensive business solutions",
+      description: "Official website for DAVPG College Gorakhpur, providing information about courses, faculty, and admissions",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
-      completedDate: "2024-02-28",
+      completedDate: "2025-03-28",
       category: "Education"
     },
     {
       id: 3,
       name: "Peek PDF",
       url: "https://peek-pdf.netlify.app/",
-      description: "Creative portfolio showcasing innovative designs and interactive experiences",
+      description: "Document management system for uploading, viewing, and sharing PDF files with AI-powered search",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=200&fit=crop",
       technologies:  ["React.js", "CSS", "GenAI"," Node.js", "Express.js", "MongoDB"],
-      completedDate: "2024-03-10",
+      completedDate: "2025-02-10",
       category: "Business"
     },
     {
       id: 4,
-      name: "Healthcare App",
-      url: "https://example-healthcare.com",
-      description: "Comprehensive healthcare management system with patient portal and appointment scheduling",
+      name: "DOG Registration Portal",
+      url: "https://dog-registration.vercel.app/",
+      description: "Online portal for dog registration and management, including vaccination records and owner details for Nagar Nigam Gorakhpur",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
       technologies: ["Vue.js", "Firebase", "Express"],
-      completedDate: "2024-04-05",
-      category: "Healthcare"
+      completedDate: "2025-06-05",
+      category: "Government Services"
     },
     {
       id: 5,
