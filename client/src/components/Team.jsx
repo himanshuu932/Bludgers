@@ -14,8 +14,8 @@ const teamMembersData = [
     bio: 'Himanshu is a visionary Full Stack Developer, bridging the gap between elegant front-end interfaces and robust, scalable back-end systems, crafting seamless digital experiences .', // Enhanced Description
     imageUrl: '/him.webp', // Changed to .webp
     socials: [
-      { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
-      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
+      { id: 'linkedin', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/himanshu-upadhyay-2309a1298', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: 'https://github.com/himanshuu932', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
@@ -25,8 +25,8 @@ const teamMembersData = [
     bio: 'A highly skilled backend developer specializing in robust API design and scalable database solutions. Utkarsh ensures the seamless flow of data that powers our applications.',
     imageUrl: '/utk.webp', // Changed to .webp
     socials: [
-    { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
-      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
+    { id: 'linkedin', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/utkarsh-041903278', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: 'https://github.com/utkarsh2023021', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
@@ -36,8 +36,8 @@ const teamMembersData = [
     bio: 'Ashutosh brings designs to life with elegant and responsive user interfaces, focusing on performance and user delight. He crafts the visual magic users interact with daily.',
     imageUrl: './av.webp', // Changed to .webp
     socials: [
-     { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
-      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
+     { id: 'linkedin', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/ashutosh-verma-776770265', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: 'https://github.com/AshutoshVerma140404', label: "Eva's Twitter/X Profile" },
     ],
   },
   {
@@ -45,10 +45,10 @@ const teamMembersData = [
     name: 'Arav Shukla',
     role: 'Frontend Developer',
     bio: 'Arav is passionate about creating intuitive and engaging web experiences. He combines creativity with technical precision to build interfaces that captivate users.',
-    imageUrl: 'https://via.placeholder.com/250/90EE90/000000?Text=Arav+S.', // Placeholder. If you have a .webp for Arav, replace this.
+    imageUrl: './arav.webp', // Placeholder. If you have a .webp for Arav, replace this.
     socials: [
-       { id: 'linkedin', icon: <Linkedin size={20} />, url: '#eva-linkedin', label: "Eva's LinkedIn" },
-      { id: 'github', icon: <Github size={20} />, url: '#eva-twitter', label: "Eva's Twitter/X Profile" },
+       { id: 'linkedin', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/arav-shukla-0269621b8', label: "Eva's LinkedIn" },
+      { id: 'github', icon: <Github size={20} />, url: 'https://github.com/AravShukla10', label: "Eva's Twitter/X Profile" },
     ],
   }
 ];
