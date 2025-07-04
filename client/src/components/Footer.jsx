@@ -53,9 +53,9 @@ return(
                 <h4 className="footer-links-title">Navigate</h4>
                 <ul className="footer-links-list">
                   <li><a href="/">Home</a></li>
-                  <li><a href="/works">Our Works</a></li>
-                  <li><a href="/team">Team</a></li>
-                  <li><a href="/contact">Contact Us</a></li>
+                  <li><a href="/services">Our Works</a></li>
+                  <li><a href="/#team">Team</a></li>
+                  <li><a href="/#contact">Contact Us</a></li>
                 </ul>
               </div>
               
