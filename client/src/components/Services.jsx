@@ -42,16 +42,6 @@ const WebsiteShowcase = () => {
        technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
       completedDate: "2025-06-05",
       category: "Government Services"
-    },
-   {
-      id: 5,
-      name: "KalyanMandapam Portal",
-      url: "https://kalyan-mandapam.vercel.app/",
-      description: "Online booking portal for Kalyan Mandapam, allowing users to check availability, book dates, and manage reservations",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
-       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
-      completedDate: "2025-07-05",
-      category: "Government Services"
     }
   ]);
 
