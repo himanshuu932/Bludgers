@@ -239,7 +239,7 @@ const EnhancedHeroSection = () => {
               </p>
                         {/* Stats Grid */}
             <div className={`grid grid-cols-2 gap-4 transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <StatsCard number={5} suffix="+" label="Projects" delay={0} icon={Code} />
+              <StatsCard number={10} suffix="+" label="Projects" delay={0} icon={Code} />
               <StatsCard number={2} suffix="+" label="Years" delay={200} icon={Award} />
               <StatsCard number={100} suffix="%" label="Success" delay={400} icon={Target} />
               <StatsCard number={24} suffix="/7" label="Support" delay={600} icon={Users} />
@@ -294,7 +294,7 @@ const EnhancedHeroSection = () => {
 
             {/* Stats Grid */}
             <div className={`grid grid-cols-4 gap-6 max-w-6xl mx-auto mb-12 transform transition-all duration-1000 delay-600 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <StatsCard number={5} suffix="+" label="Projects Delivered" delay={0} icon={Code} />
+              <StatsCard number={10} suffix="+" label="Projects Delivered" delay={0} icon={Code} />
               <StatsCard number={2} suffix="+" label="Years Experience" delay={200} icon={Award} />
               <StatsCard number={100} suffix="%" label="Success Rate" delay={400} icon={Target} />
               <StatsCard number={24} suffix="/7" label="Support Available" delay={600} icon={Users} />
