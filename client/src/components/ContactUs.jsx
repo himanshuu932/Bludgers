@@ -9,8 +9,8 @@ const contactMethodsData = [
     icon: <Mail size={28} className="aex-icon-mail" />,
     title: 'Email Us',
     description: "We'll respond within 24 hours",
-    link: 'mailto:bludger52@gmail.com',
-    linkText: 'bludger52@gmail.com',
+    link: 'mailto:bludgers52@gmail.com',
+    linkText: 'bludgers52@gmail.com',
     ariaLabel: 'Send an email to bludger52@gmail.com'
   },
   {

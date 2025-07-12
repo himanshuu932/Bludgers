@@ -7,7 +7,7 @@ const WebsiteShowcase = () => {
       id: 1,
       name: "Sewa Bharat Goraksh",
       url: "https://sewabharatigoraksh.org/",
-      description: "Charity Website for promotion and collleting donations",
+      description: "Website for Sewa Bharat Goraksh, showcasing their services and initiatives in the community along with a donation portal for supporting their cause",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
       technologies: ["React", "CSS"],
       completedDate: "2025-01-15",
@@ -15,14 +15,15 @@ const WebsiteShowcase = () => {
     },
     {
       id: 2,
-      name: "DAVPG College GKP",
-      url: "https://davpgcollegegkp.ac.in",
-      description: "Official website for DAVPG College Gorakhpur, providing information about courses, faculty, and admissions",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
-      technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
-      completedDate: "2025-03-28",
-      category: "Education"
-    },
+      name: "DOG Registration Portal",
+      url: "https://dog-registration.vercel.app/",
+      description: "Online portal for dog registration and management, including vaccination records and owner details for Nagar Nigam Gorakhpur",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2025-06-05",
+      category: "Government Services"
+    }
+   ,
     {
       id: 3,
       name: "Peek PDF",
@@ -32,17 +33,57 @@ const WebsiteShowcase = () => {
       technologies:  ["React.js", "CSS", "GenAI"," Node.js", "Express.js", "MongoDB"],
       completedDate: "2025-02-10",
       category: "Business"
+    }, {
+      id: 4,
+      name: "DAVPG College GKP",
+      url: "https://davpgcollegegkp.ac.in",
+      description: "Official website for DAVPG College Gorakhpur, providing information about courses, faculty, and admissions",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
+      technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2025-04-28",
+      category: "Education"
     },
     {
-      id: 4,
-      name: "DOG Registration Portal",
-      url: "https://dog-registration.vercel.app/",
-      description: "Online portal for dog registration and management, including vaccination records and owner details for Nagar Nigam Gorakhpur",
+      id: 5,
+      name: "Kalyan Mandapam Portal",
+      url: "https://kalyan-mandapam.vercel.app/",
+      description: "Online portal for booking and managing Kalyan Mandapam services, including event scheduling and payment processing",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
        technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
-      completedDate: "2025-06-05",
+      completedDate: "2025-05-15",
       category: "Government Services"
+    },
+    {
+      id: 6,
+      name: "TeachEase",
+      url: "https://teach-ease.netlify.app/",
+      description: "A comprehensive education platform for students and teachers, offering course management, assignments, and communication tools",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2024-11-05",
+      category: "Education"
+    },
+      {
+      id: 6,
+      name: "ArogyaAi",
+      url: "https://arogyaai.vercel.app/",
+      description: "AI-powered healthcare platform for booking appointments, managing medical records, and accessing health resources",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2025-06-25",
+      category: "Healthcare"
+    },
+       {
+      id: 6,
+      name: "Numbr",
+      url: "https://numbrapp.in/",
+      description: "Barber booking app for scheduling appointments, managing services, and customer interactions",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
+       technologies: ["React.js", "CSS", "Tailwind"," Node.js", "Express.js", "MongoDB"],
+      completedDate: "2025-07-25",
+      category: "E-Commerce"
     }
+
   ]);
 
   const [selectedWebsite, setSelectedWebsite] = useState(null);
@@ -67,7 +108,7 @@ const WebsiteShowcase = () => {
       'Portfolio': '#5eead4',
       'Healthcare': '#34d399',
       'Education': '#f59e0b',
-      'Real Estate': '#ef4444'
+      'Government Services': '#ef4444'
     };
     return colors[category] || '#60a5fa';
   };
@@ -228,11 +269,11 @@ const WebsiteShowcase = () => {
                 
                 {/* Category Badge */}
                 <div 
-                  className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
+                  className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
                   style={{
                     background: `${getCategoryColor(website.category)}20`,
                     border: `1px solid ${getCategoryColor(website.category)}40`,
-                    color: getCategoryColor(website.category)
+                    color: 'green'
                   }}
                 >
                   Live
@@ -299,10 +340,7 @@ const WebsiteShowcase = () => {
                     <Calendar className="w-4 h-4" />
                     <span>{formatDate(website.completedDate)}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Code className="w-4 h-4" />
-                    <span>Live</span>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -391,10 +429,7 @@ const WebsiteShowcase = () => {
                       <span>Completed:</span>
                       <span>{formatDate(selectedWebsite.completedDate)}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Status:</span>
-                      <span className="text-green-400">Live</span>
-                    </div>
+              
                   </div>
                 </div>
               </div>
